@@ -3,6 +3,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import Profile from '../../components/ui/Profile';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import '../../styles/scroll.css';
 
 class ConnectView extends Component
 {
@@ -13,6 +14,7 @@ class ConnectView extends Component
     this.state = {
       users: []
     };
+
   }
 
   componentDidMount()
@@ -23,7 +25,7 @@ class ConnectView extends Component
         major: "Computer Science",
         id: "misaig",
         bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        interests: ["test"],
+        interests: ["Drumming", "Programming", "Playing Football"],
         social: [
           {name: "instagram", id:"gmisail"},
           {name: "snapchat", id:"gmisail"}
@@ -34,7 +36,7 @@ class ConnectView extends Component
         major: "Electrical Engineering",
         id: "kilbuc",
         bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        interests: ["Watching the Eagles get injured"],
+        interests: ["Watching the Eagles get injured", "Going to Tech Dumps", "Sleeping"],
         social: [
           {name: "instagram", id:"ckilburn12"},
           {name: "snapchat", id:"ckilburn12"}

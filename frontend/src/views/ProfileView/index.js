@@ -9,24 +9,21 @@ class ProfileView extends Component
     return (
         <div>
             <Section title="Profile">
-                <form>
-                    <div className="form-group">
-                        <label for="name">Name</label>
-                        <input id="name" className="form-control" type="text"></input>
-                    </div>
-
-                    <div className="form-group">
-                        <label for="username">Username</label>
-                        <input id="username" className="form-control" type="text" value="misaig" readonly="true"></input>
-                    </div>
-
-                    <div className="form-group">
-                        <label for="bio">Bio</label>
-                        <textarea id="bio" className="form-control" type="text">
-
-                        </textarea>
-                    </div>
-                </form>
+                <Form model={[
+                    {
+                        type: "text",
+                        label: "Name"
+                    },
+                    {
+                        type: "text-readonly",
+                        label: "Username",
+                        value: "misaig"
+                    },
+                    {
+                        type: "text-area",
+                        label: "Bio"
+                    }
+                ]}/>
             </Section>
 
             <Section title="Preferences">

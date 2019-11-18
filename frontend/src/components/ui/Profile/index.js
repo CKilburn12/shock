@@ -97,15 +97,3 @@ class Profile extends Component
 }
 
 export default Profile;
-
-/*
-
-              <li>  
-                <i class="fa fa-instagram fa-fw"> </i>
-                <a href={"http://www.instagram.com/gmisail"}>gmisail</a>
-              </li>
-              
-              <li>  
-                <i class="fa fa-facebook-square fa-fw"> </i>
-                <a href={"http://www.facebook.com/graham.misail"}>graham.misail</a>
-              </li>*/
