@@ -19,7 +19,7 @@ class App extends Component
     return (
       <Router>
         <Menu />
-        <div className="container">
+        <div className="container-fluid">
           <Switch>
             <Route exact path="/">
               <ConnectView />

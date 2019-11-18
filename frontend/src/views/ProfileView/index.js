@@ -55,6 +55,17 @@ class ProfileView extends Component
                     },
                     {
                         type: "option",
+                        label: "What is your preferred study environment?",
+                        options: [
+                            "1 (Silence)",
+                            "2",
+                            "3",
+                            "4",
+                            "5 (Loud)"
+                        ]
+                    },
+                    {
+                        type: "option",
                         label: "What is your primary focus?",
                         options: [
                             "1 (Academically Focused)",
@@ -62,6 +73,42 @@ class ProfileView extends Component
                             "3",
                             "4",
                             "5 (Socially Focused)"
+                        ]
+                    },
+                    {
+                        type: "option",
+                        label: "What time do you typically wake up?",
+                        options: [
+                            "< 5 am",
+                            "6 am",
+                            "7 am",
+                            "8 am",
+                            "> 9 am"
+                        ]
+                    },
+
+                    {
+                        type: "option",
+                        label: "What time do you typically go to sleep?",
+                        options: [
+                            "8 pm",
+                            "9 pm",
+                            "10 pm",
+                            "11 pm",
+                            "12 pm",
+                            "> 1 am"
+                        ]
+                    },
+                    {
+                        type: "option",
+                        label: "Favorite type of music?",
+                        options: [
+                            "Hip-hop",
+                            "Classic Rock",
+                            "Pop",
+                            "Alternative",
+                            "Metal",
+                            "Classical"
                         ]
                     }
                 ]} />
@@ -71,31 +118,5 @@ class ProfileView extends Component
     );
   }
 }
-
-/*<form>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">How much does noise bother you while studying?</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Not at all)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (I like it quiet)</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">How tidy of a person are you?</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Very Messy)</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5 (Very Tidy)</option>
-                        </select>
-                    </div>
-                    
-                    <button className="btn btn-primary">Save</button>
-                </form> */
 
 export default ProfileView;

@@ -30,13 +30,13 @@ class Menu extends Component
   render()
   {
     return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="navbar-brand">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="navbar-brand">
           <span role="img" aria-label="logo">{this.getAcronym()} ⚡</span>
         </div>
   
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav mr-auto">
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav mr-auto">
             <MenuItem title="Home" path="/" />
             <MenuItem title="Profile" path="/profile" />
           </ul>
