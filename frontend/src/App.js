@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Menu from './components/ui/Menu';
+
 import ConnectView from './views/ConnectView';
 import ProfileView from './views/ProfileView';
+import HousingView from './views/HousingView';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -18,7 +20,21 @@ class App extends Component
   {
     return (
       <Router>
-        <Menu />
+        <Menu items={[
+          {
+            title: "Home",
+            path: "/"
+          },
+          {
+            title: "Profile",
+            path: "/profile"
+          },
+          {
+            title: "Housing",
+            path: "/housing"
+          }
+        ]}/>
+
         <div className="container-fluid">
           <Switch>
             <Route exact path="/">
@@ -27,6 +43,10 @@ class App extends Component
 
             <Route exact path="/profile">
               <ProfileView />
+            </Route>
+
+            <Route exact path="/housing">
+              <HousingView />
             </Route>
           </Switch>
         </div>

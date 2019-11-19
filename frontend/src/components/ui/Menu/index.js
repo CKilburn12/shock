@@ -37,8 +37,9 @@ class Menu extends Component
   
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
-            <MenuItem title="Home" path="/" />
-            <MenuItem title="Profile" path="/profile" />
+            {
+              this.props.items.map((element, id) =>  <MenuItem id={id} title={element.title} path={element.path} />)
+            }
           </ul>
         </div>
       </nav>
