@@ -48,7 +48,7 @@ class ConnectView extends Component
   render()
   {
       return (
-        <CarouselProvider lockOnWindowScroll={true} dragEnabled={false} naturalSlideWidth={100} naturalSlideHeight={100} totalSlides={this.state.users.length}>
+        <CarouselProvider lockOnWindowScroll={true} dragEnabled={false} naturalSlideWidth={100} naturalSlideHeight={50} totalSlides={this.state.users.length}>
           <div className="row">
             <div className="col">
               <ButtonBack className="my-3 btn btn-warning btn-block"><i class="fa fa-arrow-circle-left"></i></ButtonBack>

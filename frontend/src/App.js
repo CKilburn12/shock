@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './styles/fonts.css';
 import './styles/buttons.css';
 import './styles/footer.css';
-
+import './styles/scroll.css';
 
 class App extends Component
 {
