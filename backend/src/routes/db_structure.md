@@ -2,5 +2,5 @@ Database name: "user_info"
 
 Collection name: "users"
 
-| "name" | "age" | "bio" |
-|--------|-------|-------|
+| "id" | "name" | "age" | "bio" |
+|------|--------|-------|-------|
