@@ -2,8 +2,8 @@ Database name: "user_info"
 
 Collection name: "users"
 
-| "id" | "email" | "password" | "name" | "age" | "bio" |
-|------|---------|------------|--------|-------|-------|
+| "id" | "email" | "password" | "name" | "grade" | "bio" |
+|------|---------|------------|--------|---------|-------|
 
 Collection name: "swipes"
 
