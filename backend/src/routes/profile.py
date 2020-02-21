@@ -18,9 +18,9 @@ user_id = 0
 def name():
     return user_collection.find_one({"id": user_id})["name"]
 
-@profile.route("/age")
+@profile.route("/grade")
 def age():
-	return user_collection.find_one({"id": user_id})["age"]
+	return user_collection.find_one({"id": user_id})["grade"]
 
 @profile.route("/bio")
 def bio():
@@ -29,14 +29,16 @@ def bio():
 @profile.route("/swipe", methods=["POST"])
 def swipe():
 	swipee_id = request.form["swipee_id"]
-	swipes.insert_one({"swiper_id" : user_id, "swipee_id": swipee_id})
+	swipe_dir = request.form["swipe_dir"] # 0 is left, 1 is right
+	swipes.insert_one({"swiper_id" : user_id, "swipee_id": swipee_id * (-1 if swipe_dir == 0 else 1)})
 
-	poss_match = swipes.find_one({"swiper_id" : swipee_id})
-	if poss_match != None:
-		order1 = {"user1_id": user_id, "user2_id": swipee_id}
-		order2 = {"user1_id": swipee_id, "user2_id": user_id}
-		matches.insert_many([order1, order2])
-		return 0
+	if swipe_dir == 1:
+		poss_match = swipes.find_one({"swiper_id" : swipee_id})
+		if poss_match != None and poss_match["swipee_id"] == user_id:
+			order1 = {"user1_id": user_id, "user2_id": swipee_id}
+			order2 = {"user1_id": swipee_id, "user2_id": user_id}
+			matches.insert_many([order1, order2])
+			return 0
 	return 1
 
 @profile.route("/matches")
